@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
+    <title>ND Livros</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="app-header">
+        <h1>📚 ND Livros</h1>
+        <p>Gerencie sua biblioteca</p>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2 id="form-title">Novo Livro</h2>
+            <form id="livro-form">
+                <input type="hidden" id="livro-id">
+                
+                <div class="form-group">
+                    <label for="titulo">Título *</label>
+                    <input type="text" id="titulo" name="titulo" required placeholder="Digite o título do livro">
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição *</label>
+                    <textarea id="descricao" name="descricao" required rows="3" placeholder="Digite uma descrição"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="autor">Autor</label>
+                    <input type="text" id="autor" name="autor" placeholder="Nome do autor">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="disponivel" name="disponivel" checked>
+                        Disponível para empréstimo
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="btn-submit">Cadastrar</button>
+                    <button type="button" class="btn btn-secondary" id="btn-cancel" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Lista de Livros</h2>
+            <div id="loading" class="loading">Carregando livros...</div>
+            <div id="livros-list" class="livros-grid"></div>
+            <div id="empty-state" class="empty-state" style="display:none;">
+                <p>Nenhum livro cadastrado ainda.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>ND Livros - Desafio Fullstack - Coding Mobile</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker registrado:', reg.scope))
+                .catch(err => console.error('Erro ao registrar Service Worker:', err));
+        }
+    </script>
+</body>
+</html>
+

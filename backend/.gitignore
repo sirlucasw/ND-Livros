@@ -138,4 +138,51 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-.TODO.md
+# ============================================
+# SECURITY - ARQUIVOS SENSÍVEIS
+# ============================================
+
+# Variáveis de ambiente (senhas, URIs, tokens)
+.env
+.env.*
+!.env.example
+
+# Certificados e chaves privadas
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Arquivos de credenciais
+*credentials*
+*secrets*
+config/local*
+
+# ============================================
+# SISTEMA OPERACIONAL
+# ============================================
+
+.DS_Store
+Thumbs.db
+
+# ============================================
+# IDEs E EDITORES
+# ============================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================
+# ARQUIVOS TEMPORÁRIOS
+# ============================================
+
+*.tmp
+*.temp
+*.bak
+*.orig
+
+TODO.md
