@@ -1,7 +1,7 @@
 // Configuração da API - Detecta ambiente automático
 const API_URL = window.location.hostname === 'localhost' 
   ? 'http://localhost:5000/api/Livro'
-  : 'https://seu-backend-render.onrender.com/api/Livro';
+  : 'https://nd-livros.onrender.com/api/Livro';
 
 // Elementos DOM
 const form = document.getElementById('livro-form');
