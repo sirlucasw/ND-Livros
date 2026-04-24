@@ -42,6 +42,66 @@ Thumbs.db
 *.temp
 *.bak
 
+# Build e Dist
+dist/
+build/
+*.min.js
+*.min.css
+
+# Cache
+.npm
+.cache
+.eslintcache
+
+# Dependências globais
+package-lock.json (apenas no .gitignore local se necessário)
+
+# Variáveis de ambiente específicas
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# IDE e Editors
+*.swp
+*.swo
+*~
+.vscode/settings.json
+.vscode/extensions.json
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.patch
+.AppleDouble
+.LSOverride
+
+# Node/npm
+npm-debug.log
+yarn-error.log
+.npm-cache/
+yarn.lock (consider committing or add to .gitignore based on preference)
+
+# Arquivos de Debug
+.debug
+*.mem
+
+# Arquivos de Teste e Coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Arquivos do MongoDB local
+*.db
+local_database/
+mongo_data/
+
+# Arquivos do Render e Vercel (apenas se gerados localmente)
+.vercel/
+.render/
+
 # ============================================
 # OBSERVAÇÃO DE SEGURANÇA
 # ============================================
@@ -53,5 +113,11 @@ Thumbs.db
 # local em backend/, mas esta regra na raiz garante
 # proteção extra caso arquivos .env sejam criados
 # em outros locais do projeto.
+#
+# Certifique-se de que .env NUNCA está commitado!
+# Se acidentalmente commitou, remova do histórico:
+# git rm --cached .env
+# git commit --amend --no-edit
+# git push -f origin main (cuidado: força push)
 # ============================================
 

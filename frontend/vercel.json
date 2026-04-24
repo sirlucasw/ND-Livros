@@ -1,0 +1,12 @@
+{
+  "name": "ND-Livros",
+  "version": 2,
+  "buildCommand": "echo 'No build required'",
+  "framework": "static",
+  "outputDirectory": ".",
+  "env": {
+    "REACT_APP_API_URL": {
+      "default": "https://seu-backend-render.onrender.com"
+    }
+  }
+}

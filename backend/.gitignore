@@ -146,8 +146,44 @@ vite.config.ts.timestamp-*
 .env
 .env.*
 !.env.example
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
 
 # Certificados e chaves privadas
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Credenciais e secrets
+*credentials*
+*secrets*
+config/local*
+
+# MongoDB dados locais
+mongo_data/
+*.db
+
+# Render e Vercel
+.vercel/
+.render/
+
+# IDE settings sensíveis
+.vscode/settings.json
+.idea/workspace.xml
+.idea/inspectionProfiles/
+
+# OS específicos
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.AppleDouble
+.LSOverride
+._*
 *.pem
 *.key
 *.crt
